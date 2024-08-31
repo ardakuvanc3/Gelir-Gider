@@ -1,0 +1,71 @@
+drawer: Drawer(
+child: ListView(
+padding: const EdgeInsets.all(0),
+children: [
+const DrawerHeader(
+decoration: BoxDecoration(
+color: Colors.deepPurple,
+),
+child: UserAccountsDrawerHeader(
+decoration: BoxDecoration(color: Colors.deepPurple),
+accountName: Text(
+"Arda Kuvanç",
+style: TextStyle(fontSize: 18),
+),
+accountEmail: Text("ardakuvanc3@gmail.com"),
+currentAccountPictureSize: Size.square(50),
+currentAccountPicture: CircleAvatar(
+backgroundColor: Colors.teal,
+child: Text(
+"A",
+style: TextStyle(fontSize: 30.0, color: Colors.white),
+),
+),
+margin: EdgeInsets.only(bottom: 0),
+),
+),
+ListTile(
+leading: const Icon(Icons.person),
+title: const Text(' Profil '),
+onTap: () {
+Navigator.push(context, MaterialPageRoute(builder: (context) => Profile()));
+},
+),
+ListTile(
+leading: const Icon(Icons.book),
+title: const Text(' Gelir & Gider Paneli '),
+onTap: () {
+Navigator.push(context, MaterialPageRoute(builder: (context) => Panel()));
+},
+),
+ListTile(
+leading: const Icon(Icons.money_off_csred_outlined),
+title: const Text(' Faturalar & Borçlar '),
+onTap: () {
+Navigator.push(context, MaterialPageRoute(builder: (context) => Bills()));
+},
+),
+ListTile(
+leading: const Icon(Icons.workspace_premium),
+title: const Text(' Premiuma Yükselt '),
+onTap: () {
+Navigator.push(context, MaterialPageRoute(builder: (context) => Premium()));
+},
+),
+ListTile(
+leading: const Icon(Icons.edit),
+title: const Text(' Profili Düzenle '),
+onTap: () {
+Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile()));
+},
+),
+ListTile(
+leading: const Icon(Icons.logout),
+title: const Text(' Çıkış Yap '),
+onTap: () {
+Navigator.pop(context);
+},
+),
+],
+),
+),
